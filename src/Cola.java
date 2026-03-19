@@ -28,13 +28,11 @@ public class Cola {
         }
     }
 
-    public void envejecer() {
-        for (int i = inicio; i <= fin && i != -1; i++) {
-            arreglo[i] = 1; // Convierte azul (2) en gris (1)
-        }
+    public int getTamanoActual() {
+        return (inicio == -1) ? 0 : (fin - inicio) + 1;
     }
 
-    public boolean estaVacia() { return inicio == -1; }
-    public int getTamanoActual() { return (inicio == -1) ? 0 : (fin - inicio) + 1; }
-    public int getDatoEn(int i) { return arreglo[inicio + i]; }
+    public int getDatoEn(int i) {
+        return arreglo[inicio + i];
+    }
 }
